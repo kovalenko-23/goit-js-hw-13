@@ -5,7 +5,7 @@ const REQUEST = 'image_type=photo&orientation=horizontal&safesearch=true&per_pag
 
 
 async function fetchHits(inputValue, pageNmb) {
-    const responce = await axios.get(`${BASE_URL}${KEY}&q=${inputValue}&${REQUEST}&page=1&}`);
+    const responce = await axios.get(`${BASE_URL}${KEY}&q=${inputValue}&${REQUEST}&page=${pageNmb}`);
     const hits = await responce;
     return hits.data;
 }
