@@ -31,7 +31,7 @@ function onInputChange(event) {
     if (!inputValue) {
         searchBtn.setAttribute('disabled', true);
     }
-    console.log(inputValue);
+    // console.log(inputValue);
 };
 
 searchBtn.addEventListener('click', onSrchButtonClick);
@@ -43,8 +43,8 @@ async function onSrchButtonClick(event) {
         const hits = responce.hits;
         const totalHits = responce.totalHits;
         loadMoreBtn.classList.remove('unvisible');
-        console.log(responce);
-        console.log(hits);
+        // console.log(responce);
+        // console.log(hits);
 
          if (hits.length === 0) {
              Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
@@ -90,7 +90,7 @@ async function onClickLoadMore() {
         loadMoreBtn.classList.add('unvisible');
         Notiflix.Notify.info('We`re sorry, but you`ve reached the end of search results.');
     }
-    console.log(hits);
-    console.log(pageNmb);
+    // console.log(hits);
+    // console.log(pageNmb);
 }
 
